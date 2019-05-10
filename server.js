@@ -3,10 +3,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(__dirname + '/deployangul'));
+app.use(express.static(__dirname + '/app-testangular'));
 
 app.all('*', (req, res) => {
-  res.status(200).sendFile(__dirname + '/deployangul/index.html');
+  res.status(200).sendFile(__dirname + '/app-testangular/index.html');
 });
 
 app.listen(process.env.PORT || 8080);
